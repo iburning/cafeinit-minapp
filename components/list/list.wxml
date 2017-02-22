@@ -1,0 +1,3 @@
+<template name="ci-list">
+  <view class="ci-list"></view>
+</template>

@@ -1,0 +1,26 @@
+<!--list.wxml-->
+<view class="container">
+  <view class="ci-list-header">
+    LIST HEADER
+  </view>
+  <view class="ci-list">
+    <view class="ci-list-cell">
+      List Cell
+    </view>
+    <view class="ci-list-cell">
+      List Cell
+    </view>
+    <view class="ci-list-cell">
+      List Cell
+    </view>
+    <view class="ci-list-cell">
+      List Cell
+    </view>
+    <view class="ci-list-cell">
+      List Cell
+    </view>
+    <view class="ci-list-cell">
+      List Cell
+    </view>
+  </view>
+</view>

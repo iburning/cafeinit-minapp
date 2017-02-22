@@ -1,0 +1,24 @@
+{
+  "name": "cafeinit-minapp",
+  "homepage": "https://github.com/iburning/cafeinit-minapp",
+  "authors": [
+    "burning <iburning@live.cn>"
+  ],
+  "description": "CafeInit Style for Wechat Min App",
+  "main": "",
+  "keywords": [
+    "cafeinit",
+    "minapp"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "cafeinit-vue": "^0.1.20"
+  }
+}

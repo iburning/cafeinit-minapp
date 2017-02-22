@@ -1,0 +1,11 @@
+/**
+ * @fileoverview cafeinit style
+ * @author: burning <www.cafeinit.com>
+ * @version: 2017-02-22
+ */
+
+view {
+  box-sizing: border-box;
+}
+
+@import "./list/list.wxss";
