@@ -4,14 +4,14 @@
     LIST HEADER
   </view>
   <view class="ci-list">
-    <view class="ci-list-cell">
-      List Cell
+    <view class="ci-list-cell" bindtap="goUrl" data-url="/pages/index/index">
+      Home
     </view>
-    <view class="ci-list-cell">
-      List Cell
+    <view class="ci-list-cell" bindtap="goUrl" data-url="/pages/list/list">
+      List
     </view>
-    <view class="ci-list-cell">
-      List Cell
+    <view class="ci-list-cell" bindtap="goUrl" data-url="/pages/block/block">
+      Block
     </view>
     <view class="ci-list-cell">
       List Cell

@@ -8,4 +8,5 @@ view {
   box-sizing: border-box;
 }
 
+@import "./block/block.wxss";
 @import "./list/list.wxss";

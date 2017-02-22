@@ -1,0 +1,24 @@
+/**
+ * @fileoverview ci-list
+ * @author: burning <www.cafeinit.com>
+ * @version: 2016-08-19
+ */
+
+.ci-block {
+  width: 100%;
+  margin: 0 0 1em 0;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+}
+
+.ci-block-header,
+.ci-block-body,
+.ci-block-footer {
+  position: relative;
+  min-height: 44px;
+  padding: 10px;
+}
+
+.ci-block-header {
+  border-bottom: 1rpx solid #eee;
+}
