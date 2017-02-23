@@ -2,8 +2,10 @@
   "pages":[
     "pages/index/index",
     "pages/block/block",
+    "pages/collection/collection",
     "pages/list/list",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/tabs/tabs"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,0 +1,86 @@
+/**
+ * @fileoverview form
+ * @author: burning <www.cafeinit.com>
+ * @version: 2016-12-06
+ */
+
+
+.form-group() {
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0 0 1em 0;
+  line-height: 1.625em;
+}
+
+
+.control-label() {
+  min-width: 2em;
+  padding: 0.25em 0;
+  margin-right: 0.75em;
+}
+
+
+.form-control(@ns, @input-color:@color-gray) {
+  flex: 1;
+  width: 100%;
+
+  color: @input-color;
+  vertical-align: middle;
+  line-height: inherit;
+
+  box-shadow: none;
+  height: auto;
+  padding: 0;
+  border: none;
+
+  // .@{ns}checkbox,
+  // .@{ns}checkbox-inline,
+  // .@{ns}radio,
+  // .@{ns}radio-inline {
+  //   position: relative;
+  //   overflow: hidden;
+  //   padding: 0.25em;
+  //
+  //   input {
+  //     position: absolute;
+  //     left: -500px;
+  //   }
+  //
+  //   input:checked+i:before {
+  //     color: @color-primary;
+  //   }
+  //
+  //   i {
+  //     font-size: 1.25em;
+  //   }
+  // }
+
+  .@{ns}checkbox,
+  .@{ns}radio {
+    display: block;
+    // margin-bottom: 0.5em;
+  }
+
+  .@{ns}checkbox-inline,
+  .@{ns}radio-inline {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}
+
+.form-control-border(@size:1px, @color:@color-border) {
+  appearance: none;
+  background-color: transparent;
+
+  padding: 0.25em 0.5em;
+  margin: 0;
+  border: solid @size @color;
+  border-radius: 0;
+  outline: 0;
+
+  line-height: 1.625em;
+}

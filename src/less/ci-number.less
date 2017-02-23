@@ -1,0 +1,40 @@
+/**
+ * @fileoverview ci-number
+ * @author: burning <www.cafeinit.com>
+ * @version: 2016-12-06
+ */
+
+.@{ns}number {
+  @size: 36px;
+
+  position: relative;
+  display: inline-block;
+  width: @size * 4;
+  height: @size;
+  // font-size: @font-size-small;
+
+  input {
+    height: @size;
+    padding-left: @size + 10px;
+    padding-right: @size + 10px;
+    text-align: center;
+  }
+
+  .@{ns}btn {
+    position: absolute;
+    display: block;
+    width: @size;
+    height: @size;
+    padding: 0;
+  }
+
+  .@{ns}btn-minus {
+    left: 0;
+    top:0;
+  }
+
+  .@{ns}btn-plus {
+    right: 0;
+    top:0;
+  }
+}

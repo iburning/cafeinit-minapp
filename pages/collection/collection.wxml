@@ -1,0 +1,29 @@
+<!--collection.wxml-->
+<view class="container">
+  <view class="ci-collection ci-collection-flex">
+    <view class="ci-collection-cell">
+      A
+    </view>
+    <view class="ci-collection-cell">
+      B
+    </view>
+    <view class="ci-collection-cell">
+      C
+    </view>
+    <view class="ci-collection-cell">
+      D
+    </view>
+    <view class="ci-collection-cell">
+      E
+    </view>
+    <view class="ci-collection-cell">
+      F
+    </view>
+    <view class="ci-collection-cell">
+      G
+    </view>
+    <view class="ci-collection-cell">
+      H
+    </view>
+  </view>
+</view>

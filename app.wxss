@@ -1,6 +1,6 @@
 /**app.wxss**/
 
-@import "./components/style.wxss";
+@import "./dist/cafeinit.wxss";
 
 .container {
   height: 100%;

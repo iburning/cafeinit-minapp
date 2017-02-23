@@ -1,0 +1,33 @@
+<!--tabs.wxml-->
+
+<import src="/components/tabs/index.wxml" />
+
+<view class="container">
+  <view class="ci-tabs ci-tabs-underline">
+    <view class="ci-tab ci-tab-active">
+      Tab A
+    </view>
+    <view class="ci-tab">
+      Tab B
+    </view>
+    <view class="ci-tab">
+      Tab C
+    </view>
+  </view>
+
+  <template is="ci-tabs" data="{{ items: myTabs, current: myTabsCurrent }}" />
+
+  <template is="ci-tabs" data="{{ cid: 1, items: myTabs1, current: myTabsCurrent1 }}" />
+
+  <view class="ci-tabs ci-tabs-column ci-fixed-bottom">
+    <view class="ci-tab ci-tab-active">
+      Tab A
+    </view>
+    <view class="ci-tab">
+      Tab B
+    </view>
+    <view class="ci-tab">
+      Tab C
+    </view>
+  </view>
+</view>

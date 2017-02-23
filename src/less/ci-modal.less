@@ -1,0 +1,171 @@
+/**
+ * @fileoverview ci-modal
+ * @author: burning <www.cafeinit.com>
+ * @version: 2016-11-28
+ */
+
+.ci-modal {
+  z-index: 1200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: opacity 0.3s ease;
+
+  &:before {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .ci-dimmer {
+    position: absolute;
+  }
+}
+
+.ci-modal-dialog {
+  z-index: 1500;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 260px;
+  max-width: 100%;
+  min-height: @base-height;
+  max-height: 100%;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+.ci-modal-alert,
+.ci-modal-confirm {
+  .ci-modal-dialog {
+    background-color: @color-white;
+    border-radius: 10px;
+  }
+}
+
+.ci-modal-header {
+  padding: 15px 15px 10px 15px;
+  font-size: @font-size-smaller;
+  font-weight: 500;
+}
+
+.ci-modal-body {
+  padding: 15px;
+}
+
+.ci-modal-footer {
+  display: table;
+  width: 100%;
+  border-top: 1px solid @color-border;
+  height: @base-height;
+  line-height: @base-height;
+}
+
+.ci-modal-btn {
+  display: table-cell;
+  height: @base-height;
+  padding: 0 10px;
+  border-right: 1px solid @color-border;
+  text-decoration: none;
+
+  overflow: hidden;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.modal-actions,
+.ci-modal-actions {
+  z-index: 1200;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.modal-actions-group,
+.ci-modal-actions-group {
+  background-color: @color-white;
+  overflow: hidden;
+  min-height: @base-height;
+  margin-bottom: 10px;
+  border-radius: 10px;
+
+  .ci-list {
+    margin: 0;
+  }
+
+  .ci-list-cell:before {
+    left: 0;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.ci-enter, .ci-leave-active {
+  opacity: 0;
+
+  .ci-modal-container,
+  .ci-modal-dialog {
+    transform: scale(0.75);
+  }
+
+  .modal-actions,
+  .ci-modal-actions {
+    transform: translateY(100%);
+  }
+}
+
+
+/* for bootstrap */
+.modal {
+  z-index: 1200;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100%;
+  text-align: center;
+  // transition: opacity 0.3s ease;
+
+  &:before {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.modal-dialog {
+  z-index: 1500;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  min-width: 260px;
+  max-width: 100%;
+  min-height: @base-height;
+  max-height: 100%;
+  margin: auto;
+  text-align: left;
+}

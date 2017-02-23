@@ -27,7 +27,7 @@ module.exports = function (grunt) {
     watch: {
       less: {
         files: '<%= config.src %>/less/**/*.less',
-        tasks: ['less'],
+        tasks: ['less:develompent'],
         options: {}
       }
     },
@@ -52,16 +52,14 @@ module.exports = function (grunt) {
       develompent: {
         options: {
           compress: false,   // Compress output by removing some whitespaces.
-          plugins: [
-            new (require('less-plugin-autoprefix'))({browsers: ['last 2 versions']}),
-            // new (require('less-plugin-clean-css'))(cleanCssOptions)
-          ]
+          // plugins: [
+          //   new (require('less-plugin-autoprefix'))({browsers: ['last 2 versions']}),
+          //   // new (require('less-plugin-clean-css'))(cleanCssOptions)
+          // ]
         },
         files: [
           {
-            '<%= config.dist %>/css/cafeinit.css': '<%= config.src %>/less/cafeinit.less',
-            '<%= config.dist %>/css/ci-amazeui.css': '<%= config.src %>/less/ci-amazeui.less',
-            '<%= config.dist %>/css/ci-bootstrap.css': '<%= config.src %>/less/ci-bootstrap.less'
+            '<%= config.dist %>/cafeinit.wxss': '<%= config.src %>/less/cafeinit.less'
           }
         ]
       }
@@ -71,5 +69,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
+  grunt.registerTask('dev', ['less:develompent']);
   grunt.registerTask('default', ['less:prodcution']);
 };

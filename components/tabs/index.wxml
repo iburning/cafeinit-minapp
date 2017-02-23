@@ -1,0 +1,16 @@
+<template name="ci-tabs">
+  <view class="ci-tabs ci-tabs-underline">
+    <block wx:for="{{items}}" wx:key="index">
+      <template is="ci-tab" data="{{pid: cid, cid: index, ...item, isActive: (index == current) }}" />
+    </block>
+  </view>
+</template>
+
+<template name="ci-tab">
+  <view class="ci-tab{{isActive ? ' ci-tab-active' : ''}}"
+    data-pid="{{pid}}"
+    data-cid="{{cid}}"
+    bindtap="_onItemTap">
+    {{title}}
+  </view>
+</template>

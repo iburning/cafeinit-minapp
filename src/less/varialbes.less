@@ -1,0 +1,171 @@
+/**
+ * @fileoverview varialbes
+ * @author: burning <www.cafeinit.com>
+ * @version: 2017-02-15
+ */
+
+
+// @ns: ~"ci-";
+@base-height: 44px;
+@global-radius: 5px;
+@global-margin: 15px;
+
+// Global variables
+// =============================================================================
+
+
+// Black - White - Gray
+// -----------------------------------------------------------------------------
+
+@color-black:           #000;
+@color-white:           #fff;
+@color-red:             #ff3366;
+
+@color-default:         #bdc3c7;
+@color-primary:         #1abc9c;    // #52b888;
+@color-info:            #3498db;
+@color-success:         #2ecc71;
+@color-warning:         #f1c40f;
+@color-danger:          #e74c3c;
+@color-disabled:        #bdc3c7;
+
+
+@color-gray-darker:     lighten(@color-black, 13.5%); // #222
+@color-gray-dark:       lighten(@color-black, 20%);   // #333
+@color-gray:            lighten(@color-black, 33.5%); // #555
+@color-gray-light:      lighten(@color-black, 60%);   // #999
+@color-gray-lighter:    lighten(@color-black, 93.5%); // #eee
+
+
+@color-background:      @color-white;
+@color-border:          #ddd;
+
+
+@font-size-large:   24px;
+@font-size-bigger:  20px;
+@font-size-big:     18px;
+@font-size-normal:  16px;
+@font-size-small:   14px;
+@font-size-smaller: 12px;
+@font-size-tiny:    10px;
+
+
+// Responsive variables
+// =============================================================================
+
+// Breakpoint
+// -----------------------------------------------------------------------------
+
+@breakpoint-small:            640px;  // 0 - 640px
+@breakpoint-medium:           1024px; // 641 - 1024px
+@breakpoint-large:            1280px; // 1025 - 1280px
+@breakpoint-xl:               1440px; // 1281 - 1440px
+@breakpoint-xxl:              1920px; // 1441 -1920px
+
+@breakpoint-small-max:        @breakpoint-small;
+@breakpoint-md:               @breakpoint-small-max; // legacy var, DO NOT USE IT
+
+@breakpoint-medium-min:       (@breakpoint-small + 1);
+@breakpoint-medium-max:       @breakpoint-medium;
+
+@breakpoint-large-min:        (@breakpoint-medium + 1);
+@breakpoint-large-max:        @breakpoint-large;
+
+@breakpoint-xl-min:           (@breakpoint-large + 1);
+@breakpoint-xl-max:           @breakpoint-xl;
+
+@breakpoint-xxl-min:          (@breakpoint-xl + 1);
+@breakpoint-xxl-max:          @breakpoint-xxl;
+
+
+// Media Queries
+// NOTE '~' in the beginning - media query must be escaped
+// -----------------------------------------------------------------------------
+
+@screen:        ~"only screen";
+
+@landscape:     ~"@{screen} and (orientation: landscape)";
+@portrait:      ~"@{screen} and (orientation: portrait)";
+
+@small-up:      ~"@{screen}";
+@small-only:    ~"@{screen} and (max-width: @{breakpoint-small-max})";
+
+@medium-up:     ~"@{screen} and (min-width:@{breakpoint-medium-min})";
+@medium-only:   ~"@{screen} and (min-width:@{breakpoint-medium-min}) and (max-width:@{breakpoint-medium-max})";
+
+@large-up:      ~"@{screen} and (min-width:@{breakpoint-large-min})";
+@large-only:    ~"@{screen} and (min-width:@{breakpoint-large-min}) and (max-width:@{breakpoint-large-max})";
+
+@xl-up:         ~"@{screen} and (min-width:@{breakpoint-xl-min})";
+@xl-only:       ~"@{screen} and (min-width:@{breakpoint-xl-min}) and (max-width:@{breakpoint-xl-max})";
+
+@xxl-up:        ~"@{screen} and (min-width:@{breakpoint-xxl-min})";
+@xxl-only:      ~"@{screen} and (min-width:@{breakpoint-xxl-min}) and (max-width:@{breakpoint-xxl-max})";
+
+
+// button color
+@btn-default-color: @color-white;
+@btn-default-bg: @color-default;
+@btn-default-border:  @color-default;
+
+@btn-primary-color: @color-white;
+@btn-primary-bg: @color-primary;
+@btn-primary-border:  @color-primary;
+
+@btn-info-color: @color-white;
+@btn-info-bg: @color-info;
+@btn-info-border:  @color-info;
+
+@btn-success-color: @color-white;
+@btn-success-bg: @color-success;
+@btn-success-border:  @color-success;
+
+@btn-warning-color: @color-white;
+@btn-warning-bg: @color-warning;
+@btn-warning-border:  @color-warning;
+
+@btn-danger-color: @color-white;
+@btn-danger-bg: @color-danger;
+@btn-danger-border:  @color-danger;
+
+
+@btn-xs-font-size: @font-size-smaller;
+@btn-sm-font-size: @font-size-small;
+@btn-md-font-size: @font-size-normal;
+@btn-lg-font-size: @font-size-big;
+@btn-xl-font-size: @font-size-bigger;
+
+
+// =============================================================================
+// Table variables
+// =============================================================================
+
+@table-cell-padding:       .5rem;
+@table-cell-padding-compact: .4rem;
+@table-line-height:        1.5em;       // @global-line-height;
+@table-bg:                 transparent; // overall background-color
+@table-bg-striped:         #f9f9f9;
+@table-bg-hover:           #e9e9e9;     // #fbf6e9;
+@table-bg-active:          #ffd;
+@table-border-color:       @color-border;
+
+// @table-primary-bg:         rgba(red(@global-primary), green(@global-primary), blue(@global-primary), .115);
+// @table-primary-color:      darken(@global-primary, 8%);
+//
+// @table-success-bg:         rgba(red(@global-success), green(@global-success), blue(@global-success), .115);
+// @table-success-color:          @global-success;
+//
+// @table-warning-bg:         rgba(red(@global-warning), green(@global-warning), blue(@global-warning), .115);
+// @table-warning-color:          @global-warning;
+//
+// @table-danger-bg:          rgba(red(@global-danger), green(@global-danger), blue(@global-danger), .115);
+// @table-danger-color:           @global-danger;
+
+
+// Grid system
+// -----------------------------------------------------------------------------
+
+@grid-columns:              12;
+@grid-gutter:               1rem;   // Columns padding
+@grid-gutter-md:            1.5rem;
+@grid-max-width:            1000px;
