@@ -3,31 +3,23 @@
 <import src="/components/tabs/index.wxml" />
 
 <view class="container">
-  <view class="ci-tabs ci-tabs-underline">
-    <view class="ci-tab ci-tab-active">
-      Tab A
-    </view>
-    <view class="ci-tab">
-      Tab B
-    </view>
-    <view class="ci-tab">
-      Tab C
-    </view>
-  </view>
+  <template is="ci-tabs" data="{{items: myTabs, current: myTabsCurrent}}" />
 
-  <template is="ci-tabs" data="{{ items: myTabs, current: myTabsCurrent }}" />
-
-  <template is="ci-tabs" data="{{ cid: 1, items: myTabs1, current: myTabsCurrent1 }}" />
+  <template is="ci-tabs"
+    data="{{className: 'my-tabs', cid: 1, current: myTabsCurrent1, items: myTabs1}}" />
 
   <view class="ci-tabs ci-tabs-column ci-fixed-bottom">
-    <view class="ci-tab ci-tab-active">
-      Tab A
+    <view class="ci-tab ci-tab-active" data-cid="0" bindtap="tabBarItemOnTap">
+      <view class="ci-tab-icon icon-home" />
+      <text class="ci-tab-title">Home</text>
     </view>
-    <view class="ci-tab">
-      Tab B
+    <view class="ci-tab" data-cid="1" bindtap="tabBarItemOnTap">
+      <view class="ci-tab-icon icon-books" />
+      <text class="ci-tab-title">Books</text>
     </view>
-    <view class="ci-tab">
-      Tab C
+    <view class="ci-tab" data-cid="2" bindtap="tabBarItemOnTap">
+      <view class="ci-tab-icon icon-my" />
+      <text class="ci-tab-title">My</text>
     </view>
   </view>
 </view>

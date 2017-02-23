@@ -3,12 +3,14 @@ const CI = require('../../components/index')
 
 Page(Object.assign({}, CI.Tabs, {
   data: {
+    // isDebug: true,
+
     myTabs: [
-      { title: 'TAB A' },
-      { title: 'TAB B' },
-      { title: 'TAB C' }
+      { title: 'Stores', icon: 'store' },
+      { title: 'Items', icon: 'item' },
+      { title: 'Orders', icon: 'order' }
     ],
-    myTabsCurrent: 1,
+    myTabsCurrent: 0,
 
     myTabs1: [
       { title: 'TAB 1' },
@@ -32,5 +34,9 @@ Page(Object.assign({}, CI.Tabs, {
         myTabsCurrent: data.cid
       })
     }
+  },
+
+  tabBarItemOnTap(evt) {
+    console.log('tabBarItemOnTap', evt.currentTarget.dataset.cid)
   }
 }))
