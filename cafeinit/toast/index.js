@@ -10,6 +10,7 @@ module.exports = {
     data = data || {}
     _data.isShow = true
     _data.text = data.text || 'CI Toast'
+    _data.icon = data.icon
     _data.isLock = data.isLock
     console.log('ciToastShow', data)
 

@@ -338,9 +338,9 @@ view {
   display: block;
   width: 48px;
   height: 48px;
-  margin: 0 auto;
+  margin: 0 auto 10px auto;
   font-weight: lighter;
-  font-size: 48px;
+  font-size: 43.2px;
   line-height: 48px;
 }
 .ci-enter,

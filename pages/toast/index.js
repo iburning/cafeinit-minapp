@@ -35,8 +35,16 @@ Page(Object.assign({}, CI.Tabs, CI.Toast, {
   showToast() {
     this.ciToastShow({
       text: 'Hello CafeInit',
-      // isLock: true,
-      // duration: 0
+      icon: 'success',
+      duration: 1500
+    })
+  },
+
+  showToast1() {
+    this.ciToastShow({
+      text: 'Uploading...',
+      icon: 'waiting',
+      isLock: true
     })
   },
 
