@@ -1,5 +1,10 @@
-// pages/block/block.js
-const CI = require('../../components/index')
+/**
+ * @fileoverview CITabs
+ * @author: burning <www.cafeinit.com>
+ * @version: 2017-02-22
+ */
+
+const CI = require('../../cafeinit/index')
 
 Page(Object.assign({}, CI.Tabs, {
   data: {
