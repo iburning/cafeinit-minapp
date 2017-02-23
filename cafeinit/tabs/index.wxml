@@ -10,7 +10,7 @@
   <view class="ci-tab{{isActive ? ' ci-tab-active' : ''}}"
     data-pid="{{pid}}"
     data-cid="{{cid}}"
-    bindtap="_onItemTap">
+    bindtap="_itemOnTap">
     <icon wx:if="{{icon}}" class="ci-tab-icon icon-{{icon}}" />
     <text class="ci-tab-title">{{title}}</text>
   </view>

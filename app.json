@@ -3,9 +3,11 @@
     "pages/index/index",
     "pages/block/block",
     "pages/collection/collection",
+    "pages/modal/index",
     "pages/list/list",
     "pages/logs/logs",
-    "pages/tabs/tabs"
+    "pages/tabs/tabs",
+    "pages/toast/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

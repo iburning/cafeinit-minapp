@@ -23,4 +23,13 @@
       List Cell
     </view>
   </view>
+
+  <view class="ci-list-header">
+    Popups
+  </view>
+  <view class="ci-list">
+    <view class="ci-list-cell" bindtap="goUrl" data-url="/pages/toast/index">
+      Toast
+    </view>
+  </view>
 </view>

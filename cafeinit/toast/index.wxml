@@ -1,0 +1,10 @@
+<template name="ci-toast">
+  <view class="ci-toast{{className ? (' ' + className) : ''}}"
+    data-cid="{{cid}}" bindtap="_ciToastOnTap">
+    <view class="ci-toast-content" data-cid="{{cid}}">
+      <icon wx:if="{{icon}}" class="ci-toast-icon icon-{{icon}}" />
+      <text class="ci-toast-text">{{text}}</text>
+    </view>
+    <view class="ci-dimmer"></view>
+  </view>
+</template>

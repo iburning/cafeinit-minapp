@@ -1,6 +1,6 @@
 <!--tabs.wxml-->
 
-<import src="/components/tabs/index.wxml" />
+<import src="/cafeinit/tabs/index.wxml" />
 
 <view class="container">
   <template is="ci-tabs" data="{{items: myTabs, current: myTabsCurrent}}" />

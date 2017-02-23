@@ -5,9 +5,13 @@
  */
 
 module.exports = {
-  _onItemTap(evt) {
+  _onTap(evt) {
+    console.log('CITabs._onTap', evt)
+  },
+
+  _itemOnTap(evt) {
     let dataset = evt.currentTarget.dataset
-    this.data.isDebug && console.log('CITabs._onItemTap', dataset)
+    this.data.isDebug && console.log('CITabs._itemOnTap', dataset)
     if (!dataset.pid) {
       console.warn('CITabs 缺少 pid 属性')
     }

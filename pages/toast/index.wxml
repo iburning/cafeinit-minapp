@@ -1,0 +1,14 @@
+<!--
+* @fileoverview tabs
+* @author: burning <www.cafeinit.com>
+* @version: 2017-02-22
+-->
+
+<import src="/cafeinit/toast/index.wxml" />
+
+<view class="container">
+  <template is="ci-toast" wx:if="{{ciToastData.isShow}}"
+    data="{{cid: 'my-toast', text: ciToastData.text}}" />
+
+  <button type="primary" bindtap="showToast">Show Toast</button>
+</view>
