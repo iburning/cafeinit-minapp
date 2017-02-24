@@ -9,7 +9,7 @@ module.exports = {
     let dataset = evt.currentTarget.dataset
     this.data.isDebug && console.info('_ciConfirmCancel', dataset)
 
-    this.ciConfirmHide()
+    this.ciHideConfirm()
     if (typeof this.ciConfirmDidCancel === 'function') {
       this.ciConfirmDidCancel(dataset, evt)
     }
@@ -19,39 +19,39 @@ module.exports = {
     let dataset = evt.currentTarget.dataset
     this.data.isDebug && console.info('_ciConfirmOK', dataset)
 
-    this.ciConfirmHide()
+    this.ciHideConfirm()
     if (typeof this.ciConfirmDidOK === 'function') {
       this.ciConfirmDidOK(dataset, evt)
     }
   },
 
-  ciConfirmShow(data) {
+  ciShowConfirm(data) {
     data = data || {}
     data.isShow = true
     this.setData({
       ciConfirmData: data
     })
 
-    if (!data.cid) {
-      console.warn('CIConfirm 缺少 cid 属性')
-    }
+    // if (!data.cid) {
+    //   console.warn('CIConfirm 缺少 cid 属性')
+    // }
 
     if (typeof data.didCancel !== 'function') {
-      console.warn(data.cid, ' 缺少 didCancel 回调方法')
+      console.warn('缺少 didCancel 回调方法')
     }
     else {
       this.ciConfirmDidCancel = data.didCancel
     }
 
     if (typeof data.didOK !== 'function') {
-      console.warn(data.cid, ' 缺少 didOK 回调方法')
+      console.warn('缺少 didOK 回调方法')
     }
     else {
       this.ciConfirmDidOK = data.didOK
     }
   },
 
-  ciConfirmHide() {
+  ciHideConfirm() {
     this.setData({
       'ciConfirmData.isShow': false
     })

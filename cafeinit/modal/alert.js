@@ -5,45 +5,48 @@
  */
 
 module.exports = {
-  ciAlertShow(data) {
-    data = data || {}
-    data.isShow = true
-    this.setData({
-      ciAlertData: data
-    })
-  },
-
-  ciAlertHide(data) {
-    this.setData({
-      'ciAlertData.isShow': false
-    })
-
-    if (typeof this.ciAlertDidHide === 'function') {
-      this.ciAlertDidHide(data)
-    }
-  },
-
   _ciAlertButtonOnTap(evt) {
     let dataset = evt.currentTarget.dataset
     dataset.sender = 'button'
     this.data.isDebug && console.info('_ciAlertButtonOnTap', dataset)
-    if (!dataset.cid) {
-      console.warn('CIToast 缺少 cid 属性')
-    }
 
-    this.ciAlertHide(dataset)
+    this.ciHideAlert()
+    if (typeof this.ciAlertDidHide === 'function') {
+      this.ciAlertDidHide(dataset, evt)
+    }
   },
 
   _ciAlertDimmerOnTap(evt) {
     let dataset = evt.currentTarget.dataset
     dataset.sender = 'dimmer'
     this.data.isDebug && console.info('_ciAlertDimmerOnTap', dataset)
-    if (!dataset.cid) {
-      console.warn('CIToast 缺少 cid 属性')
-    }
 
-    if (!this.data.ciAlertData.isLock) {
-      this.ciAlertHide(dataset)
+    if (!this.data.ciAlertData.isStopDimmer) {
+      this.ciHideAlert()
+      if (typeof this.ciAlertDidHide === 'function') {
+        this.ciAlertDidHide(dataset, evt)
+      }
     }
+  },
+
+  ciShowAlert(data) {
+    data = data || {}
+    data.isShow = true
+    this.setData({
+      ciAlertData: data
+    })
+
+    if (typeof data.didHide !== 'function') {
+      console.warn('缺少 didHide 回调方法')
+    }
+    else {
+      this.ciAlertDidHide = data.didHide
+    }
+  },
+
+  ciHideAlert() {
+    this.setData({
+      'ciAlertData.isShow': false
+    })
   }
 }

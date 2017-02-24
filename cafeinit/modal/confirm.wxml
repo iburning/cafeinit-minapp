@@ -1,18 +1,17 @@
 <template name="ci-confirm">
-  <view class="ci-modal ci-modal-confirm{{className ? (' ' + className) : ''}}"
-    data-cid="{{cid}}">
+  <view class="ci-modal ci-modal-confirm{{className ? (' ' + className) : ''}}">
     <view class="ci-modal-dialog">
       <view class="ci-modal-header" wx:if="{{title}}">{{title}}</view>
       <view class="ci-modal-body">{{content || "Let's Rock n' Roll!"}}</view>
       <view class="ci-modal-footer">
-        <view class="ci-modal-btn" bindtap="_ciConfirmCancel">
+        <view class="ci-modal-btn" data-cid="{{cid}}" bindtap="_ciConfirmCancel">
           {{concelText || 'Cancel'}}
         </view>
-        <view class="ci-modal-btn" bindtap="_ciConfirmOK">
+        <view class="ci-modal-btn" data-cid="{{cid}}" bindtap="_ciConfirmOK">
           {{okText || 'OK'}}
         </view>
       </view>
     </view>
-    <view class="ci-dimmer" bindtap="_ciConfirmDimmerOnTap"></view>
+    <view class="ci-dimmer"></view>
   </view>
 </template>

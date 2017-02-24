@@ -30,23 +30,29 @@ Page(Object.assign({}, CI.Alert, CI.Confirm, {
 
   // methods
   showAlert() {
-    this.ciAlertShow({
+    this.ciShowAlert({
       title: 'Title',
-      content: 'Hello CafeInit'
+      content: 'Hello CafeInit',
+      didHide(data) {
+        console.log('alert did hide', data)
+      }
     })
   },
 
   showAlert1() {
-    this.ciAlertShow({
+    this.ciShowAlert({
       className: 'rock-alert',
-      content: 'Let\'s Rock n\' Roll',
-      okText: 'Come on!'
+      content: 'Let\'s Rock n\' Roll!',
+      okText: 'Come on!',
+      isStopDimmer: true,
+      didHide(data) {
+        console.log('rock', data)
+      }
     })
   },
 
   showConfirm() {
-    this.ciConfirmShow({
-      cid: 'my-confirm',
+    this.ciShowConfirm({
       title: 'Confirm',
       content: 'Are you ready?',
       didCancel() {
@@ -59,8 +65,9 @@ Page(Object.assign({}, CI.Alert, CI.Confirm, {
   },
 
   showConfirm1() {
-    this.ciConfirmShow({
-      content: "Let's Rock n' Roll",
+    this.ciShowConfirm({
+      className: 'rock-confirm',
+      content: "Let's Rock n' Roll?",
       didCancel() {
         console.info('rock cancel')
       },
@@ -68,18 +75,5 @@ Page(Object.assign({}, CI.Alert, CI.Confirm, {
         console.info("let's rock")
       }
     })
-  },
-
-  // ci delegate methods
-  ciAlertDidHide(data) {
-    console.log('ciAlertDidHide', data)
-  },
-
-  ciConfirmDidCancel(data) {
-    console.log('ciConfirmDidCancel', data)
-  },
-
-  ciConfirmDidOK(data) {
-    console.log('ciConfirmDidOK', data)
   }
 }))
