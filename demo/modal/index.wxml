@@ -5,11 +5,18 @@
 -->
 
 <import src="/cafeinit/modal/alert.wxml" />
+<import src="/cafeinit/modal/confirm.wxml" />
 
 <view class="container">
   <template is="ci-alert" wx:if="{{ciAlertData.isShow}}"
     data="{{cid: 'my-alert', ...ciAlertData}}">
   </template>
 
+  <template is="ci-confirm" wx:if="{{ciConfirmData.isShow}}"
+    data="{{className: 'rock-confirm', ...ciConfirmData}}">
+  </template>
+
   <button type="primary" bindtap="showAlert">Show Alert</button>
+  <button type="primary" bindtap="showConfirm">Show Confirm</button>
+  <button type="primary" bindtap="showConfirm1">Show Confirm 01</button>
 </view>

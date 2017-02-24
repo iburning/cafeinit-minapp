@@ -5,5 +5,6 @@
  */
 
 exports.Alert = require('./modal/alert')
+exports.Confirm = require('./modal/confirm')
 exports.Tabs = require('./tabs/index')
 exports.Toast = require('./toast/index')

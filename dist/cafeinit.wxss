@@ -206,29 +206,28 @@ view {
 .ci-modal-alert .ci-modal-dialog,
 .ci-modal-confirm .ci-modal-dialog {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .ci-modal-header {
-  padding: 15px 15px 10px 15px;
+  padding: 15px 15px 0 15px;
   font-size: 12px;
   font-weight: 500;
 }
 .ci-modal-body {
-  padding: 15px;
+  padding: 20px 15px;
 }
 .ci-modal-footer {
-  display: table;
+  display: flex;
   width: 100%;
   border-top: 1px solid #ddd;
-  height: 44px;
-  line-height: 44px;
 }
 .ci-modal-btn {
-  display: table-cell;
-  height: 44px;
-  padding: 0 10px;
+  flex: 1;
+  padding: 10px;
   border-right: 1px solid #ddd;
-  text-decoration: none;
+  color: #1abc9c;
+  line-height: 1.5em;
+  font-size: 14px;
   overflow: hidden;
   word-wrap: normal;
   text-overflow: ellipsis;
@@ -264,11 +263,6 @@ view {
 .ci-modal-actions-group .ci-list-cell:before {
   left: 0;
 }
-.modal-actions-group a,
-.ci-modal-actions-group a {
-  display: block;
-  text-decoration: none;
-}
 .modal-actions-group:last-child,
 .ci-modal-actions-group:last-child {
   margin-bottom: 0;
@@ -288,30 +282,6 @@ view {
 .ci-enter .ci-modal-actions,
 .ci-leave-active .ci-modal-actions {
   transform: translateY(100%);
-}
-/* for bootstrap */
-.modal {
-  z-index: 1200;
-  text-align: center;
-}
-.modal:before {
-  content: " ";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-.modal-dialog {
-  z-index: 1500;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 80%;
-  min-width: 260px;
-  max-width: 100%;
-  min-height: 44px;
-  max-height: 100%;
-  margin: auto;
-  text-align: left;
 }
 /**
  * @fileoverview ci-list

@@ -1,5 +1,5 @@
 /**
- * @fileoverview CIToast
+ * @fileoverview CIAlert
  * @author: burning <www.cafeinit.com>
  * @version: 2017-02-24
  */

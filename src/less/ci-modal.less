@@ -43,34 +43,33 @@
 .ci-modal-confirm {
   .ci-modal-dialog {
     background-color: @color-white;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 }
 
 .ci-modal-header {
-  padding: 15px 15px 10px 15px;
+  padding: 15px 15px 0 15px;
   font-size: @font-size-smaller;
   font-weight: 500;
 }
 
 .ci-modal-body {
-  padding: 15px;
+  padding: 20px 15px;
 }
 
 .ci-modal-footer {
-  display: table;
+  display: flex;
   width: 100%;
   border-top: 1px solid @color-border;
-  height: @base-height;
-  line-height: @base-height;
 }
 
 .ci-modal-btn {
-  display: table-cell;
-  height: @base-height;
-  padding: 0 10px;
+  flex: 1;
+  padding: 10px;
   border-right: 1px solid @color-border;
-  text-decoration: none;
+  color: @color-primary;
+  line-height: 1.5em;
+  font-size: @font-size-small;
 
   overflow: hidden;
   word-wrap: normal;
@@ -111,10 +110,10 @@
     left: 0;
   }
 
-  a {
-    display: block;
-    text-decoration: none;
-  }
+  // a {
+  //   display: block;
+  //   text-decoration: none;
+  // }
 
   &:last-child {
     margin-bottom: 0;
@@ -134,38 +133,4 @@
   .ci-modal-actions {
     transform: translateY(100%);
   }
-}
-
-
-/* for bootstrap */
-.modal {
-  z-index: 1200;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // height: 100%;
-  text-align: center;
-  // transition: opacity 0.3s ease;
-
-  &:before {
-    content: " ";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-  }
-}
-
-.modal-dialog {
-  z-index: 1500;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 80%;
-  min-width: 260px;
-  max-width: 100%;
-  min-height: @base-height;
-  max-height: 100%;
-  margin: auto;
-  text-align: left;
 }

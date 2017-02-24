@@ -1,11 +1,11 @@
 <template name="ci-alert">
   <view class="ci-modal ci-modal-alert{{className ? (' ' + className) : ''}}"
     data-cid="{{cid}}">
-    <view class="ci-modal-dialog" data-cid="{{cid}}">
+    <view class="ci-modal-dialog">
       <view class="ci-modal-header" wx:if="{{title}}">{{title}}</view>
       <view class="ci-modal-body">{{content || 'Hello CafeInit'}}</view>
       <view class="ci-modal-footer">
-        <view class="ci-modal-btn'" bindtap="_ciAlertButtonOnTap">
+        <view class="ci-modal-btn" bindtap="_ciAlertButtonOnTap">
           {{okText || 'OK'}}
         </view>
       </view>
