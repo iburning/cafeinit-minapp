@@ -1,13 +1,13 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/block/block",
-    "pages/collection/collection",
-    "pages/modal/index",
-    "pages/list/list",
-    "pages/logs/logs",
-    "pages/tabs/tabs",
-    "pages/toast/index"
+    "demo/index/index",
+    "demo/block/index",
+    "demo/collection/index",
+    "demo/modal/index",
+    "demo/list/index",
+    "demo/logs/logs",
+    "demo/tabs/index",
+    "demo/toast/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

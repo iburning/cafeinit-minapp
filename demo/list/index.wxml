@@ -1,0 +1,38 @@
+<!--list.wxml-->
+<view class="container">
+  <view class="ci-list-header">
+    LIST HEADER
+  </view>
+  <view class="ci-list">
+    <view class="ci-list-cell">
+      <navigator url="/demo/index/index">Home</navigator>
+    </view>
+    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/list/index">
+      List
+    </view>
+    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/block/index">
+      Block
+    </view>
+    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/collection/index">
+      Collection
+    </view>
+    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/tabs/index">
+      Tabs
+    </view>
+    <view class="ci-list-cell">
+      List Cell
+    </view>
+  </view>
+
+  <view class="ci-list-header">
+    Popups
+  </view>
+  <view class="ci-list">
+    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/toast/index">
+      Toast
+    </view>
+    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/modal/index">
+      Modal
+    </view>
+  </view>
+</view>

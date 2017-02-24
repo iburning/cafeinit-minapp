@@ -1,7 +1,7 @@
 <!--list.wxml-->
 <view class="container">
   <view class="ci-block">
-    <view class="ci-block-header" bindtap="goUrl" data-url="/pages/index/index">
+    <view class="ci-block-header" bindtap="goUrl" data-url="/demo/index/index">
       <text>BLOCK HEADER</text>
     </view>
     <view class="ci-block-body">
