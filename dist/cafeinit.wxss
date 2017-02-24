@@ -168,6 +168,152 @@ view {
   background-color: rgba(0, 0, 0, 0.5);
 }
 /**
+ * @fileoverview ci-modal
+ * @author: burning <www.cafeinit.com>
+ * @version: 2016-11-28
+ */
+.ci-modal {
+  z-index: 1200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+.ci-modal:before {
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.ci-modal .ci-dimmer {
+  position: absolute;
+}
+.ci-modal-dialog {
+  z-index: 1500;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 260px;
+  max-width: 100%;
+  min-height: 44px;
+  max-height: 100%;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+.ci-modal-alert .ci-modal-dialog,
+.ci-modal-confirm .ci-modal-dialog {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.ci-modal-header {
+  padding: 15px 15px 10px 15px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.ci-modal-body {
+  padding: 15px;
+}
+.ci-modal-footer {
+  display: table;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  height: 44px;
+  line-height: 44px;
+}
+.ci-modal-btn {
+  display: table-cell;
+  height: 44px;
+  padding: 0 10px;
+  border-right: 1px solid #ddd;
+  text-decoration: none;
+  overflow: hidden;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ci-modal-btn:last-child {
+  border-right: none;
+}
+.modal-actions,
+.ci-modal-actions {
+  z-index: 1200;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+.modal-actions-group,
+.ci-modal-actions-group {
+  background-color: #fff;
+  overflow: hidden;
+  min-height: 44px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.modal-actions-group .ci-list,
+.ci-modal-actions-group .ci-list {
+  margin: 0;
+}
+.modal-actions-group .ci-list-cell:before,
+.ci-modal-actions-group .ci-list-cell:before {
+  left: 0;
+}
+.modal-actions-group a,
+.ci-modal-actions-group a {
+  display: block;
+  text-decoration: none;
+}
+.modal-actions-group:last-child,
+.ci-modal-actions-group:last-child {
+  margin-bottom: 0;
+}
+.ci-enter,
+.ci-leave-active {
+  opacity: 0;
+}
+.ci-enter .ci-modal-container,
+.ci-leave-active .ci-modal-container,
+.ci-enter .ci-modal-dialog,
+.ci-leave-active .ci-modal-dialog {
+  transform: scale(0.75);
+}
+.ci-enter .modal-actions,
+.ci-leave-active .modal-actions,
+.ci-enter .ci-modal-actions,
+.ci-leave-active .ci-modal-actions {
+  transform: translateY(100%);
+}
+/* for bootstrap */
+.modal {
+  z-index: 1200;
+  text-align: center;
+}
+.modal:before {
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.modal-dialog {
+  z-index: 1500;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  min-width: 260px;
+  max-width: 100%;
+  min-height: 44px;
+  max-height: 100%;
+  margin: auto;
+  text-align: left;
+}
+/**
  * @fileoverview ci-list
  * @author: burning <www.cafeinit.com>
  * @version: 2016-08-19

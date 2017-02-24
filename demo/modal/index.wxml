@@ -1,0 +1,15 @@
+<!--
+* @fileoverview modal alert
+* @author: burning <www.cafeinit.com>
+* @version: 2017-02-22
+-->
+
+<import src="/cafeinit/modal/alert.wxml" />
+
+<view class="container">
+  <template is="ci-alert" wx:if="{{ciAlertData.isShow}}"
+    data="{{cid: 'my-alert', ...ciAlertData}}">
+  </template>
+
+  <button type="primary" bindtap="showAlert">Show Alert</button>
+</view>
