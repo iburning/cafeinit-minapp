@@ -13,14 +13,14 @@
  * @author: burning <www.cafeinit.com>
  * @version: 2017-02-15
  */
-view {
-  box-sizing: border-box;
-}
 /**
  * @fileoverview common
  * @author: burning <www.cafeinit.com>
  * @version: 2017-02-22
  */
+view {
+  box-sizing: border-box;
+}
 .ci-fixed-top {
   z-index: 500;
   position: fixed;

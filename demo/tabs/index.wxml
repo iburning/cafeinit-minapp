@@ -2,24 +2,22 @@
 
 <import src="/cafeinit/tabs/index.wxml" />
 
-<view class="container">
-  <template is="ci-tabs" data="{{items: myTabs, current: myTabsCurrent}}" />
+<template is="ci-tabs" data="{{items: myTabs, current: myTabsCurrent}}" />
 
-  <template is="ci-tabs"
-    data="{{className: 'my-tabs', cid: 1, current: myTabsCurrent1, items: myTabs1}}" />
+<template is="ci-tabs"
+  data="{{className: 'my-tabs', cid: 1, current: myTabsCurrent1, items: myTabs1}}" />
 
-  <view class="ci-tabs ci-tabs-column ci-fixed-bottom">
-    <view class="ci-tab ci-tab-active" data-cid="0" bindtap="tabBarItemOnTap">
-      <view class="ci-tab-icon icon-home" />
-      <text class="ci-tab-title">Home</text>
-    </view>
-    <view class="ci-tab" data-cid="1" bindtap="tabBarItemOnTap">
-      <view class="ci-tab-icon icon-books" />
-      <text class="ci-tab-title">Books</text>
-    </view>
-    <view class="ci-tab" data-cid="2" bindtap="tabBarItemOnTap">
-      <view class="ci-tab-icon icon-my" />
-      <text class="ci-tab-title">My</text>
-    </view>
+<view class="ci-tabs ci-tabs-column ci-fixed-bottom">
+  <view class="ci-tab ci-tab-active" data-cid="0" bindtap="tabBarItemOnTap">
+    <view class="ci-tab-icon icon-home" />
+    <text class="ci-tab-title">Home</text>
+  </view>
+  <view class="ci-tab" data-cid="1" bindtap="tabBarItemOnTap">
+    <view class="ci-tab-icon icon-books" />
+    <text class="ci-tab-title">Books</text>
+  </view>
+  <view class="ci-tab" data-cid="2" bindtap="tabBarItemOnTap">
+    <view class="ci-tab-icon icon-my" />
+    <text class="ci-tab-title">My</text>
   </view>
 </view>

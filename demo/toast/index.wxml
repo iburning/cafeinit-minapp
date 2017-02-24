@@ -6,10 +6,8 @@
 
 <import src="/cafeinit/toast/index.wxml" />
 
-<view class="container">
-  <template is="ci-toast" wx:if="{{ciToastData.isShow}}"
-    data="{{cid: 'my-toast', ...ciToastData}}" />
+<template is="ci-toast" wx:if="{{ciToastData.isShow}}"
+  data="{{cid: 'my-toast', ...ciToastData}}" />
 
-  <button type="primary" bindtap="showToast">Show Toast</button>
-  <button type="primary" bindtap="showToast1">Show Toast 1</button>
-</view>
+<button type="primary" bindtap="showToast">Show Toast</button>
+<button type="primary" bindtap="showToast1">Show Toast 1</button>

@@ -1,38 +1,33 @@
 <!--list.wxml-->
-<view class="container">
-  <view class="ci-list-header">
-    LIST HEADER
+<view class="ci-list-header">
+  COMMON
+</view>
+<view class="ci-list">
+  <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/index/index">
+    Home
   </view>
-  <view class="ci-list">
-    <view class="ci-list-cell">
-      <navigator url="/demo/index/index">Home</navigator>
-    </view>
-    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/list/index">
-      List
-    </view>
-    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/block/index">
-      Block
-    </view>
-    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/collection/index">
-      Collection
-    </view>
-    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/tabs/index">
-      Tabs
-    </view>
-    <view class="ci-list-cell">
-      List Cell
-    </view>
+  <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/list/index">
+    List
   </view>
+  <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/block/index">
+    Block
+  </view>
+  <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/collection/index">
+    Collection
+  </view>
+  <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/tabs/index">
+    Tabs
+  </view>
+</view>
 
-  <view class="ci-list-header">
-    Popups
+<view class="ci-list-header">
+  POPUP
+</view>
+<view class="ci-list">
+  <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/modal/index">
+    Modal
   </view>
-  <view class="ci-list">
-    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/toast/index">
-      Toast
-    </view>
-    <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/modal/index">
-      Modal
-    </view>
+  <view class="ci-list-cell" bindtap="goUrl" data-url="/demo/toast/index">
+    Toast
   </view>
 </view>

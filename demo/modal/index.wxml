@@ -7,17 +7,15 @@
 <import src="/cafeinit/modal/alert.wxml" />
 <import src="/cafeinit/modal/confirm.wxml" />
 
-<view class="container">
-  <template is="ci-alert" wx:if="{{ciAlertData.isShow}}"
-    data="{{...ciAlertData}}">
-  </template>
+<template is="ci-alert" wx:if="{{ciAlertData.isShow}}"
+  data="{{...ciAlertData}}">
+</template>
 
-  <template is="ci-confirm" wx:if="{{ciConfirmData.isShow}}"
-    data="{{...ciConfirmData}}">
-  </template>
+<template is="ci-confirm" wx:if="{{ciConfirmData.isShow}}"
+  data="{{...ciConfirmData}}">
+</template>
 
-  <button type="primary" bindtap="showAlert">Show Alert</button>
-  <button type="primary" bindtap="showAlert1">Show Alert 01</button>
-  <button type="primary" bindtap="showConfirm">Show Confirm</button>
-  <button type="primary" bindtap="showConfirm1">Show Confirm 01</button>
-</view>
+<button type="primary" bindtap="showAlert">Show Alert</button>
+<button type="primary" bindtap="showAlert1">Show Alert 01</button>
+<button type="primary" bindtap="showConfirm">Show Confirm</button>
+<button type="primary" bindtap="showConfirm1">Show Confirm 01</button>
