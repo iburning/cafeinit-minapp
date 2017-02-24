@@ -5,11 +5,7 @@
  */
 
 module.exports = {
-  _onTap(evt) {
-    console.log('CITabs._onTap', evt)
-  },
-
-  _itemOnTap(evt) {
+  _ciTabsItemOnTap(evt) {
     let dataset = evt.currentTarget.dataset
     this.data.isDebug && console.log('CITabs._itemOnTap', dataset)
     if (!dataset.pid) {

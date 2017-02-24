@@ -5,9 +5,19 @@
   background-color: #ddd;
 }
 
+.order-navs .ci-block-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.order-navs .ci-tabs {
+  margin: 0;
+  border: none;
+}
+
 .navs {
-  background-color: #eee;
-  border-bottom-width: 0;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
 }
 
 .navs .ci-collection {
@@ -31,4 +41,8 @@
   border-bottom: 1px solid #ddd;
   text-align: center;
   font-size: 14px;
+}
+
+.navs .ci-collection-cell:nth-child(4n) {
+  border-right: none;
 }

@@ -1,17 +1,18 @@
 <!--pages/user/home.wxml-->
 
+<import src="/cafeinit/tabs/index.wxml" />
 <import src="/components/user/index.wxml" />
 
 <view class="user-header">
   <template is="user" data="{{id: 521, nickname: 'burning'}}" />
 </view>
 
-<view class="ci-block">
+<view class="ci-block order-navs">
   <view class="ci-block-header">
     <text class="ci-block-title">我的订单</text>
   </view>
   <view class="ci-block-body">
-    MY ORDERS
+    <template is="ci-tabs" data="{{cid: 'order-navs', style: 'column', items: orderNavs}}" />
   </view>
 </view>
 
@@ -19,5 +20,20 @@
   <view class="ci-collection-cell" wx:for="{{navs}}" wx:key="index">
     <icon class="icon-{{item.icon}}"></icon>
     <text>{{item.title}}</text>
+  </view>
+</view>
+
+<view class="ci-tabs ci-tabs-column ci-fixed-bottom tab-bar">
+  <view class="ci-tab" bindtap="toMall">
+    <view class="ci-tab-icon icon-mall" />
+    <text class="ci-tab-title">Mall</text>
+  </view>
+  <view class="ci-tab" bindtap="toShare">
+    <view class="ci-tab-icon icon-share" />
+    <text class="ci-tab-title">Shares</text>
+  </view>
+  <view class="ci-tab ci-tab-active" bindtap="toUserHome">
+    <view class="ci-tab-icon icon-my" />
+    <text class="ci-tab-title">My</text>
   </view>
 </view>

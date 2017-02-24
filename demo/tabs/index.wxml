@@ -2,7 +2,7 @@
 
 <import src="/cafeinit/tabs/index.wxml" />
 
-<template is="ci-tabs" data="{{items: myTabs, current: myTabsCurrent}}" />
+<template is="ci-tabs" data="{{style: 'underline', items: myTabs, current: myTabsCurrent}}" />
 
 <template is="ci-tabs"
   data="{{className: 'my-tabs', cid: 1, current: myTabsCurrent1, items: myTabs1}}" />
