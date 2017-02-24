@@ -7,7 +7,10 @@
     "demo/list/index",
     "demo/logs/logs",
     "demo/tabs/index",
-    "demo/toast/index"
+    "demo/toast/index",
+
+    "pages/user/home",
+    "pages/user/orders"
   ],
   "window":{
     "backgroundTextStyle":"light",

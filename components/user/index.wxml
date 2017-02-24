@@ -1,0 +1,13 @@
+<template name="user">
+  <view class="user user-{{direction || 'v'}}{{className ? (' ' + className) : ''}}">
+    <view class="avatar" data-cid="{{cid}}" bindtap="_userAvatarOnTap"
+      style="width:{{avatarSize || 50}}px; height:{{avatarSize || 50}}px; border-radius:{{avatarRadius || '50%'}};">
+      <image class="avatar" src="{{avatar || 'http://tva4.sinaimg.cn/crop.0.0.180.180.180/4e724670jw1e8qgp5bmzyj2050050aa8.jpg'}}"
+        style="width:{{avatarSize || 50}}px; height:{{avatarSize || 50}}px; border-radius:{{avatarRadius || '50%'}};"
+        mode="aspectFill" />
+    </view>
+    <view class="info">
+      <text class="nickname" data-cid="{{cid}}" bindtap="_userNicknameOnTap">{{nickname}}</text>
+    </view>
+  </view>
+</template>

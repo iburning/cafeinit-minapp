@@ -1,0 +1,34 @@
+/* pages/user/home.wxss */
+
+.user-header {
+  padding: 20px;
+  background-color: #ddd;
+}
+
+.navs {
+  background-color: #eee;
+  border-bottom-width: 0;
+}
+
+.navs .ci-collection {
+  border-top: 1px solid #ddd;
+}
+
+.navs .ci-collection::after {
+  content: " ";
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  font-size: 0;
+}
+
+.navs .ci-collection-cell {
+  background-color: #fff;
+  width: 25%;
+  height: 85px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+}

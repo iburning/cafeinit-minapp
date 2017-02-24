@@ -1,0 +1,23 @@
+<!--pages/user/home.wxml-->
+
+<import src="/components/user/index.wxml" />
+
+<view class="user-header">
+  <template is="user" data="{{id: 521, nickname: 'burning'}}" />
+</view>
+
+<view class="ci-block">
+  <view class="ci-block-header">
+    <text class="ci-block-title">我的订单</text>
+  </view>
+  <view class="ci-block-body">
+    MY ORDERS
+  </view>
+</view>
+
+<view class="ci-collection ci-collection-float navs">
+  <view class="ci-collection-cell" wx:for="{{navs}}" wx:key="index">
+    <icon class="icon-{{item.icon}}"></icon>
+    <text>{{item.title}}</text>
+  </view>
+</view>

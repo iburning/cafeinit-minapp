@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 
     watch: {
       less: {
-        files: '<%= config.src %>/less/**/*.less',
+        files: '<%= config.src %>/**/*.less',
         tasks: ['less:develompent'],
         options: {}
       }
@@ -59,7 +59,8 @@ module.exports = function (grunt) {
         },
         files: [
           {
-            '<%= config.dist %>/cafeinit.wxss': '<%= config.src %>/less/cafeinit.less'
+            '<%= config.dist %>/cafeinit.wxss': '<%= config.src %>/less/cafeinit.less',
+            '<%= config.dist %>/components.wxss': '<%= config.src %>/components/index.less'
           }
         ]
       }

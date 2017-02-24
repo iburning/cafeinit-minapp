@@ -1,0 +1,50 @@
+/**
+ * @fileoverview index
+ * @author: burning <www.cafeinit.com>
+ * @verstion: 2017-02-24
+ */
+/**
+ * @fileoverview varialbes
+ * @author: burning <www.cafeinit.com>
+ * @version: 2017-02-15
+ */
+/**
+ * @fileoverview user
+ * @author: burning <www.cafeinit.com>
+ * @verstion: 2017-02-16
+ */
+.user {
+  position: relative;
+}
+.user .info {
+  font-size: 14px;
+}
+.user .info:before,
+.user .info:after {
+  content: " ";
+  display: table;
+}
+.user .info:after {
+  clear: both;
+}
+.user .nickname {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 17.5px;
+  margin: 0;
+  line-height: 17.5px;
+  font-weight: normal;
+  color: #333333;
+}
+.user-h .avatar {
+  float: left;
+  margin-right: 10px;
+}
+.user-v .avatar {
+  margin: 0 auto;
+}
+.user-v .info {
+  padding: 0 5px;
+  text-align: center;
+}

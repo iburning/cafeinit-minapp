@@ -1,6 +1,7 @@
 /**app.wxss**/
 
 @import "./dist/cafeinit.wxss";
+@import "./dist/components.wxss";
 
 page {
   background-color: #eee;

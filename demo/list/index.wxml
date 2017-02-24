@@ -31,3 +31,15 @@
     Toast
   </view>
 </view>
+
+<view class="ci-list-header">
+  DEMO
+</view>
+<view class="ci-list">
+  <view class="ci-list-cell" bindtap="goUrl" data-url="/pages/user/home">
+    User Home
+  </view>
+  <view class="ci-list-cell" bindtap="goUrl" data-url="/pages/user/orders">
+    User Orders
+  </view>
+</view>

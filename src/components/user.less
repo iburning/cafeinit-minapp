@@ -1,0 +1,44 @@
+/**
+ * @fileoverview user
+ * @author: burning <www.cafeinit.com>
+ * @verstion: 2017-02-16
+ */
+
+.user {
+  position: relative;
+
+  .info {
+    .clearfix();
+    font-size: @font-size-small;
+  }
+
+  .nickname {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    height: @font-size-small * 1.25;
+    margin: 0;
+    line-height: @font-size-small * 1.25;
+    font-weight: normal;
+    color: @color-gray-dark;
+  }
+}
+
+.user-h {
+  .avatar {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.user-v {
+  .avatar {
+    margin: 0 auto;
+  }
+
+  .info {
+    padding: 0 5px;
+    text-align: center;
+  }
+}
